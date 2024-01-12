@@ -1,0 +1,313 @@
+@media (min-width:1165px) {
+    .main {
+        padding-bottom: 280px !important;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+    .logo_burger {
+        display: none;
+    }
+
+    .swiper-button-next {
+        right: -20px !important;
+        
+    }
+
+    .swiper-button-prev {
+        left: -20px !important;
+    }
+
+}
+
+@media (max-width:1164px) {
+
+    .container {
+        max-width: 1164px !important;
+    }
+    .info_price_rows {
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .rows_plus {
+        padding: 0px 15px 0px 15px;
+    }
+    
+    .rows_tariffs {
+        gap: 0 !important;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+    .logo_burger {
+        display: none;
+    }
+    
+}
+
+@media (max-width:992px) {
+
+    .main {
+        padding-top: 77px;
+    }
+
+    .logo_fomr {
+        display: none;
+    }
+
+    .form_inner {
+        justify-content: center !important;
+    }
+
+    #feedbackForm {
+        width: 100% !important;
+    }
+
+    .container {
+        max-width: 992px !important;
+    }
+
+    .nav {
+        height: 80px;
+        position: fixed;
+        width: 100%;
+        background: #161617;
+        z-index: 2000;
+    }
+
+    .nav_inner {
+        display: none !important;
+    }
+
+    .title_main {
+        font-size: 65px;
+    }
+
+    .pre_title_main {
+        font-size: 40px !important;
+    }
+
+    .person {
+        display: none;
+    }
+
+    .swiper {
+        width: 450px !important;
+        height: 363px;
+        border-radius: 10px;
+        margin-top: 60px;
+    }
+
+    .title_portfolio_text {
+        font-size: 50px !important;
+    }
+
+    .tariffs_inner {
+        display: flex;
+        justify-content: center;
+    }
+
+    .rows_tariffs {
+        flex-direction: column;
+        width: 363px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+    .logo_burger {
+        
+        display: block;
+    }
+    .burger_menu {
+        padding: 0px 15px 0px 15px;
+    }
+
+    .logo {
+        padding-top: 15px;
+    }
+
+    ul {
+        padding-top: 150px;
+    }
+
+    .mobilu {
+        margin-top: 50px;
+    }
+
+    .title_price_info {
+        font-size: 50px !important;
+    }
+
+    .text_main {
+        margin-top: 50px !important;
+        margin-left: 15px ;
+    }
+
+    .body {
+        background-position:  center top;
+      
+    }
+
+    .text_contact {
+        display: block;
+    }
+
+    .img_contact {
+        padding-right: 0px !important;
+    }
+
+}
+
+@media (max-width:776px) {
+
+    .container {
+        max-width: 776px !important;
+    }
+    .decr_main {
+        font-size: 18px !important;
+    }
+
+    .bg_main {
+        height: -webkit-fill-available !important;
+    }
+    
+    .content_inner {
+        padding: 63px 15px 0px 15px !important;
+    }
+
+    .title_main {
+        font-size: 55px !important;
+    }
+    
+    .card_price_info {
+        min-height: 250px !important;
+    }
+
+    .swiper {
+        width: 350px !important;
+    }
+
+    .title_portfolio_text {
+        font-size: 40px !important;
+    }
+
+    .img_telegram_footer {
+        width: 70% !important;
+    }
+
+    .img_inst_footer {
+        width: 86% !important;
+    }
+
+    .title_price_info  {
+        font-size: 60px !important;
+    }
+    .title_price_info {
+        font-size: 40px !important;
+    }
+
+    .swiper-button-next {
+        right: 80px !important;
+        top: 500px !important;
+    }
+
+    .swiper-button-prev {
+        left: 80px !important;
+        top: 500px !important;
+    }
+
+    .rows_card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text_contact {
+        display: flex;
+        justify-content: center;
+        flex-direction: none !important;
+    }
+
+    .title_text_contact {
+        font-size: 20px !important;
+    }
+
+    .decr_text_contact {
+        font-size: 10px !important;
+    }
+
+
+
+}
+
+@media (max-width:480px) {
+
+    .container {
+        max-width: 480px !important;
+    }
+    .link_main {
+        font-size: 13px !important;
+    }
+
+    .pre_link_main {
+        font-size: 13px !important;
+    }
+
+    .pre_title_main {
+        font-size: 30px !important;
+    }
+
+    .title_main {
+        font-size: 42px !important;
+    }
+    
+    .decr_main {
+        font-size: 13px !important;
+    }
+
+    .btn_main {
+        margin-top: 60px !important;
+    }
+
+    .card_price_info {
+        min-width: 260px !important;
+    }
+
+    .info_price_rows {
+        align-items: center !important;
+    }
+    .portfolio_text {
+        text-align: center;
+    }
+
+    .sliders_portfolio {
+        margin: 0 auto;
+    }
+
+    .title_price_info {
+        font-size: 35px !important;
+    }
+
+    .btn_block_price_info {
+        text-align: center;
+    }
+
+    .rows_plus_inner {
+        justify-content: center !important;
+    }
+
+    .title_text_contact {
+        margin-bottom: 62px !important;
+    }
+}
+
+@media (max-width:320px) {
+
+    .container {
+        max-width: 320px !important;
+    }
+  
+}

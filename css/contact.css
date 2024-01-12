@@ -1,0 +1,55 @@
+.body {
+    background-image: url(../img/line_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_contact {
+    padding: 100px 0px;
+}
+
+.rows_card {
+    display: flex;
+}
+
+.img_contact {
+    padding-right: 100px;
+    border-right: 1px solid white;
+    border-radius: 50px;
+
+}
+
+.img_contact img {
+    width: 380px;
+    max-width: 360px;
+    border-radius: 50px;
+}
+
+.text_contact {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid white;
+    border-radius: 50px;
+}
+
+.title_text_contact {
+    margin-bottom: 40px;
+    color: #FFF;
+    font-family: Ruberoid;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 123.1%;
+}
+
+.decr_text_contact {
+    margin-bottom: 47px;
+    color: #afaefc;
+    font-family: Ruberoid;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 123.1%;
+    list-style-type: none;
+}

@@ -1,0 +1,27 @@
+.body {
+    background-image: url(../img/line_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title_reviews {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #b6feef;
+    font-size: 45px;
+    margin-top: 0;
+    font-weight: 400;
+    margin: 110px 0px;
+}
+
+.reviews_coment {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+@media (max-width:992px) {
+    .nav {
+        position: relative ;
+    }
+}

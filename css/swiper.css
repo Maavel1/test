@@ -1,0 +1,44 @@
+.swiper {
+    width: 567px;
+    height: 363px;
+    border-radius: 10px;
+    }
+
+    .sliders_portfolio {
+        position: relative;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      background-color: #ffff;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+   .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: '' !important;
+   }
+   .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: '' !important;
+   }
+
+    .swiper-button-next {
+        right: -45px;
+        transform: rotate(180deg) !important;
+    }
+
+
+    .swiper-button-prev {
+        left: -40px;
+    }
+

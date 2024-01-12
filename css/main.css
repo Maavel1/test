@@ -1,0 +1,771 @@
+@import url(/css/media.css);
+@import url(/css/swiper.css);
+@import url(/css/contact.css);
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    padding: 0px;
+    margin: 0;
+    background: #161617;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.actives {
+    overflow-y: hidden;
+}
+
+
+.main {
+    --s:67px; /* shape size */
+    --m:4px;  /* line thickness */
+  
+    --v1: #fff 119.5deg, #0000 120.5deg;
+    --v2: #000  119.5deg, #0000 120.5deg;
+    background:
+      conic-gradient(at var(--m)              calc(var(--s)*0.5777), transparent 270deg, #000 0deg),
+      conic-gradient(at calc(100% - var(--m)) calc(var(--s)*0.5777), #000 90deg,  transparent 0deg),
+      conic-gradient(from -60deg at 50% calc(var(--s)*0.8662)             , var(--v1)),
+      conic-gradient(from -60deg at 50% calc(var(--s)*0.8662 + 2*var(--m)), var(--v2)),
+      conic-gradient(from 120deg at 50% calc(var(--s)*1.4435 + 3*var(--m)), var(--v1)),
+      conic-gradient(from 120deg at 50% calc(var(--s)*1.4435 +   var(--m)), var(--v2)),
+      linear-gradient(90deg, #fff calc(50% - var(--m)),#000 0 calc(50% + var(--m)), #fff 0);
+    background-size: calc(var(--s) + 2*var(--m)) calc(var(--s)*1.732 + 3*var(--m)); 
+    mix-blend-mode:lighten;
+    height: none;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #2eecc5;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-bottom: 60px;
+  }
+  .main:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:linear-gradient(90deg,red,blue,green) left/400% 100%;
+    animation:f 2s infinite alternate linear;
+  }
+  
+  @keyframes f {
+    100% {background-position:right}
+  }
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.menu-btn {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	z-index:1100;
+	overflow: hidden;
+}
+.menu-btn span {
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff;
+	transition: all 0.5s;
+}
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 79%;
+	height: 100%;
+	padding: 15px;
+  background: #161617;
+	transform: translateX(-100%);
+	transition: transform 0.5s; 
+}
+.menu.active {
+	transform: translateX(0);
+    z-index: 1000;
+}
+
+
+.menu a {
+	list-style-type: none;
+    font-size: 25px;
+    color: white;
+    font-family: Ruberoid;
+}
+
+
+.menu li {
+	list-style-type: none;
+    margin-bottom: 20px;
+}
+
+
+
+
+.menu-btn.active span:nth-of-type(1) {
+    display: none;
+  }
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);  
+  }
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg); 
+  }
+
+.burger_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo_burger {
+    position: relative;
+    z-index: 1200;
+    padding-top: 6px;
+}
+
+.logo_burger img {
+    width: 60%;
+}
+
+
+
+@font-face {
+    font-family: Ruberoid;
+    src: url(../fonts/Ruberoid-Bold.woff2);
+    src: url(../fonts/Ruberoid-Regular.woff2);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* nav */ 
+
+
+.nav_inner {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+}
+
+.link_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo_img {
+    width: 85%;
+    padding-top: 2px;
+}
+
+.link_nav_content {
+    color: #FFF;
+    font-family: Ruberoid;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all 0.2s ease;
+}
+
+.link_nav_content:hover {
+    transition: all 0.2s ease;
+    color: rgba(46, 236, 198, 0.637);
+}
+
+.link_nav_content:not(:last-child) {
+    margin-right: 35px;
+}
+
+
+.btn_nav_link {
+    color: #FFF;
+    font-family: Ruberoid;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 9px 30px;
+    background-color: rgba(46, 236, 197, 0.15);
+    border-radius: 36px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn_nav_link:hover {
+    border-radius: 5px;
+    background-color: #2eecc6a2;
+    transition: all 0.3s ease;
+}
+
+/* main */
+
+.content_inner {
+    padding: 147px 15px 0px 15px;
+    position: relative;
+    z-index: 3;
+}
+
+.bg_main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.title_main {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #b6feef;
+    font-size: 65px;
+    margin-bottom: 0;
+    font-weight: bold;
+    letter-spacing: 10px;
+        
+}
+
+.pre_title_main {
+    font-family: Ruberoid;
+    color: #b6feef;
+    font-size: 45px;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+.decr_main {
+    color: rgba(255, 255, 255, 0.65);
+    font-family: Ruberoid;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.person{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 791px;
+    height: 854px;
+    object-fit: cover;
+    z-index: 3;
+}
+
+.btn_main {
+    margin-top: 85px;
+}
+
+.link_main {
+    color: #FFF;
+    font-family: Ruberoid;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 12px 26px;
+    border-radius: 24px;
+    background-color: #b6fef029;
+    border: 1px solid #2eecc5;
+    transition: all 0.2s ease;
+    margin-right: 30px;
+}
+
+.link_main:hover {
+    background-color: #34524c29;
+    transition: all 0.2s ease;
+}
+
+.pre_link_main{
+    color: rgba(255, 255, 255, 0.40);
+    font-family: Ruberoid;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all 0.2s ease;
+}
+
+.pre_link_main:hover {
+    color: #ffff;
+    transition: all 0.2s ease;
+}
+
+
+/* plas_ */ 
+
+
+
+.plus_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 100px 0px 0px 0px;
+}
+
+.info_price_rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+
+
+.block_price_info {
+    max-width: 400px;
+}
+
+.card_price_info {
+    border-radius: 6px;
+    background-color:  #193895;
+    box-shadow: 0px 0px 150px 0px rgba(59, 95, 150, 0.35);
+    background-image: url('../img/money-svgrepo-com\ 1.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    padding: 40px 45px;
+    min-width: 310px;
+    min-height: 350px;
+}
+
+.card_price_info_inner {
+    width: 300px;
+}
+
+.title_price_info {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #b6feef;
+    font-size: 65px;
+    margin-bottom: 0;
+    line-height: 110.6%; /* 60.83px */
+    text-shadow: 0px 0px 36px rgba(165, 252, 235, 0.20);
+
+}
+
+.decr_info_price {
+    color: rgba(255, 255, 255, 0.65);
+    font-family: Ruberoid;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.btn_block_price_info {
+    margin-top: 55px;
+}
+
+.btn_info_price {
+    position: relative;
+    color: #FFF;
+    font-family: Ruberoid;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 16px 43px;
+    border-radius: 4px;
+    border: 1.5px solid #2EECC5;
+    background: #161617;
+    box-shadow: 0px 0px 38px 0px rgba(46, 236, 197, 0.20);
+    margin-top: 44px;
+    transition: all 0.3s ease;
+}
+
+.btn_info_price::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 7px;
+    width: 200px;
+    height: 57px;
+    border-radius: 4px;
+    border: 1.5px solid rgba(46, 236, 197, 0.40);
+    z-index: -1; 
+    transition: all 0.3s ease;
+}
+
+.btn_info_price:hover{
+    color: black;
+    background-color:#2EECC5 ;
+    border: 1.5px solid #000000;
+    transition: all 0.3s ease;
+}
+
+.btn_info_price:hover::after {
+    top: 0;
+    left: -2px;
+    height: 57px;
+    border: 1.5px solid rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.title_card_price {
+    color: #FFF;
+    font-family: Ruberoid;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 123.1%; /* 32.006px */
+}
+
+.decr_card_price {
+    color: rgba(255, 255, 255, 0.90);
+    font-family: Ruberoid;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 123.1%; /* 20.927px */
+}
+
+.rows_plus {
+    /* padding: 0px 15px 0px 15px; */
+}
+
+.rows_plus_inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.chb-color {
+    border-radius: 6px;
+    background:  #282828;
+    box-shadow: 0px 0px 80px 0px rgba(44, 44, 45, 0.35);
+}
+
+.img_i {
+    background-image: url('../img/employ-svgrepo-com\ 1.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+.img_time {
+    background-image: url('../img/time-svgrepo-com\ 1.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+.img_support {
+    background-image: url('../img/support-svgrepo-com\ 1.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+
+/* portfolio */ 
+
+.portfolio{
+    background-image: url('../img/line_bg.png');
+    background-position: center;
+}
+
+.portfolio_rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 290px 15px 365px 15px;
+}
+
+.portfolio_text {
+    max-width: 525px;
+}
+
+.title_portfolio_text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #b6feef;
+    font-size: calc(3.3rem + 1.707vw);
+    margin-bottom: 0;
+    font-weight: bold;
+    letter-spacing: 10px;
+    font-size: 55px;
+}
+
+.decr_portfolio_text {
+    color: rgba(255, 255, 255, 0.65);
+    font-family: Ruberoid;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 153.8%; /* 26.146px */
+}
+
+
+.decr_versio_portfolio {
+    display: inline-block;
+    margin-top: 40px;
+    color: #FFF;
+    font-family: Ruberoid;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 15px 31px;
+    border-radius: 49px;
+    border: 1.5px solid #2EECC5;
+    background: rgba(46, 236, 197, 0.10);
+    box-shadow: 0px 0px 37px 0px rgba(46, 236, 197, 0.20);
+}
+
+
+/*tariffs*/
+
+.tariffs {
+    padding-bottom: 216px;
+}
+
+.block_card_tariffs {
+    transition: all 0.3s ease;
+}
+
+.block_card_g {
+    box-shadow: 0px 4px 133px -17px #2EECC5;
+}
+
+.rows_tariffs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:80px;
+}
+
+.card_tariffs_inner {
+    text-align: center;
+    padding: 45px 30px 25px 30px;
+    border-radius: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: linear-gradient(169deg, #313134 9.31%, #292929 61.88%, #282828 111.76%);
+}
+
+.block_card_tariffs:hover {
+    transform: scale(1);
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+
+.minus {
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.block_price_tieme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.title_card_tariffs {
+    margin-top: 0;
+    margin-bottom: 46px;
+    color: #FFF;
+    font-family: Ruberoid;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.decr_card_tariffs {
+    margin-bottom: 71px;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: Ruberoid;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 153.8%;
+    width: 317px;
+}
+
+.price_card {
+    margin: 0px;
+    color: #FFF;
+    font-family: Ruberoid;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 153.8%; /* 33.836px */
+}
+
+.time_card {
+    color: rgba(255, 255, 255, 0.40);
+    font-family: Ruberoid;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 153.8%; /* 26.146px */
+    margin: 0;
+    text-align: left;
+}
+
+.link_tariffs {
+    padding: 18px 30px;
+    border-radius: 41px;
+    border: 1.5px solid #2EECC5;
+    background: rgba(46, 236, 197, 0.10);
+    box-shadow: 0px 0px 38px 0px rgba(46, 236, 197, 0.10);
+    color: #FFF;
+    font-family: Ruberoid;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* form*/
+
+.form {
+    background-image: url('../img/bg_za.png');
+    background-position: 100%;
+    background-repeat: no-repeat;
+    height: 458px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#feedbackForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+label {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Ruberoid;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 153.8%; /* 26.146px */
+    margin-top: 10px;
+}
+
+input, textarea {
+    border-radius: 41px;
+    border: 1.5px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0px 0px 38px 0px rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    color: white;
+    font-family: Ruberoid;
+    resize: none;
+}
+
+.title_fomr {
+    background: linear-gradient(91deg, #B5FEEF 10.31%, #2EECC5 165.09%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 36px rgba(165, 252, 235, 0.20);
+    font-family: Ruberoid;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110.6%; /* 55.3px */
+    margin: 10px 0px;
+}
+
+.form_btn {
+    padding: 15px 44px;
+    border-radius: 41px;
+    border: 1.5px solid #2EECC5;
+    background: rgba(46, 236, 197, 0.10);
+    box-shadow: 0px 0px 38px 0px rgba(255, 255, 255, 0.05);
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.form_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_fomr img{
+    width: 300px;
+}
+
+/* footer*/ 
+
+.footer_inner {
+    padding-top: 70px;
+}
+
+.block_title_img_footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 54px;
+}
+
+.socila_footer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer_img_title {
+    width: 65%;
+}
+
+.img_telegram_footer {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 80%;
+}
+
+.img_inst_footer {
+    width: 106%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.img_telegram_footer:hover,.img_inst_footer:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+.personal_rights, .mail_footer {
+    padding-top: 25px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Ruberoid;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105.6%;
+    padding-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.mail_footer:hover {
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
